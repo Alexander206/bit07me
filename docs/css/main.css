@@ -1,38 +1,117 @@
+:root {
+    --Grey: rgb(93, 93, 93);
+    --Green: #00af66;
+}
+
 * {
     box-sizing: 0;
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--Grey);
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
-    min-height: 100vh;
-    background: rgb(249, 249, 249);
-    background: radial-gradient(circle, rgba(249, 249, 249, 1) 57%, rgba(214, 214, 214, 1) 100%);
+    min-height: 100%;
+    background: radial-gradient(circle, rgba(24, 24, 24, 0.438) 57%, #00af6644 100%), url('../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 main {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    min-height: 100%;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+
+    padding: 1rem;
+    margin: 3rem;
+}
+
+/* * HEADER */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 97%;
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
     justify-content: center;
 
-    min-height: 100vh;
+    overflow: hidden;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+
+    margin: 1rem;
 }
+
+.header_logo img {
+    width: 100%;
+}
+
+.header_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    width: 24rem;
+}
+
+.header_item {
+    font-size: 1.4rem;
+}
+
+.header_item a {
+    text-decoration: none;
+    color: var(--Grey);
+    transition: 0.2s;
+}
+
+.header_item a:hover {
+    color: var(--Green);
+    transition: 0.2s;
+}
+
+/* * Container developer */
 
 .container_developer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 5rem;
 }
 
 .img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20rem;
-    height: 20rem;
+    width: 14rem;
+    height: 14rem;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -50,14 +129,28 @@ main {
 
 .name {
     text-align: center;
-    font-size: 1.8rem;
-    color: rgb(93, 93, 93);
+    font-size: 1.6rem;
+    color: var(--Grey);
+
     margin-top: 2rem;
 }
 
+.profesion {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+.caption {
+    font-size: 1.2rem;
+    color: var(--Grey);
+}
+
+/* * Redes sociales */
+
 .nav {
     display: flex;
-    width: 22rem;
+    width: 16rem;
     margin: 2rem 0;
 }
 
@@ -74,18 +167,109 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3.5rem;
+    width: 3rem;
     height: 3.5rem;
 }
 
 .nav_items a {
-    font-size: 3rem;
-    color: rgb(36, 48, 57);
+    font-size: 2.5rem;
+    color: var(--Grey);
     transition: 0.2s;
 }
 
 .nav_items a:hover {
-    color: rgb(32, 87, 129);
-    font-size: 3.3rem;
+    color: var(--Green);
+    font-size: 3rem;
     transition: 0.2s;
+}
+
+/* * separador */
+
+.separador {
+    width: 90%;
+    max-width: 50rem;
+    height: 2px;
+    background-color: var(--Grey);
+}
+
+/* * about */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.about .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+}
+
+.about .text h2 {
+    color: var(--Grey);
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+
+.about .text h2 span {
+    font-weight: bold;
+    color: rgb(65, 65, 65);
+}
+
+.about .text p {
+    max-width: 55rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: var(--Grey);
+}
+
+.ability {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 30rem;
+}
+
+.ability_target {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+}
+
+.ability_target img {
+    width: 15rem;
+}
+
+.ability_target h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.ability_target p {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.ability_target a {
+    font-size: 1.4rem;
+    color: var(--Green);
+}
+
+/* * Responsive */
+
+@media (min-width: 600px) {
+
+
+
 }
