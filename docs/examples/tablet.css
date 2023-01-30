@@ -1,0 +1,13 @@
+main {
+  display: flex;
+}
+.container {
+  width: 80vw;
+}
+
+.aside {
+  flex: auto;
+  width: 20vw;
+  height: 100vh;
+  background-color: var(--objetgrey);
+}

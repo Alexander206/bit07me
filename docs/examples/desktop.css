@@ -1,0 +1,21 @@
+:root {
+  --color-header: #00252e;
+  --color-falseText: #e1e8ee;
+  --objetgrey: #a7b9c8;
+}
+
+.container {
+  align-items: center;
+}
+
+[class^="c"] * {
+  margin-right: 2rem;
+}
+
+.circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--objetgrey);
+  margin: 0 1rem;
+}
